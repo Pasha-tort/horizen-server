@@ -6,11 +6,9 @@
   "license": "proprietary",
   "private": true,
   "type": "module",
-
   "dependencies": {
     "horizen-framework": "file:./.horizen-framework"
   },
-  
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^7.1.0"

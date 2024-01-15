@@ -4,7 +4,7 @@
         "api_key": "democode",
         "debug": true,
         "mongodb": {
-            "host": "mongodb://127.0.0.1:27017/demo"
+            "host": "mongodb://127.0.0.1:27017/task"
         },
         "ports": {
             "server": "8099"
