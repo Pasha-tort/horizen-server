@@ -19,7 +19,7 @@ export default function({db}){
 		controller: async function(){
 			const tasks = await db("task")
         .find({})
-        .toArray();
+        .toArray() || [];
 			return {tasks: tasks.map(t => {
 				t._id = t._id.toString();
 				return t;
