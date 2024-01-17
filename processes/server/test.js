@@ -76,7 +76,7 @@ function Test({config}){
 				headers: { "Content-Type": "application/json"},
 			})).json();
 			mockTasksIds.forEach(id => {
-				expect(response.result.tasksIds.map(taskId => taskId))
+				expect(response.result.tasksIds)
 					.to.include(id);
 				expect(response.result.tasks.map(t => t.taskId))
 					.to.include(id);

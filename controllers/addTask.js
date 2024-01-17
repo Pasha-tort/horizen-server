@@ -26,8 +26,7 @@ export default function({db}){
 			const {_id, ...task} = await dbTask
 				.findOne({_id: insertedId});
 
-			const res = {taskId: _id.toString(), ...task};
-			return res;
+			return {taskId: _id.toString(), ...task};
 		}
 	}
 }
