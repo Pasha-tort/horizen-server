@@ -4,7 +4,7 @@ import config from "../../config.json" assert {type: "json"};
 const horizen = new Horizen(config.horizen);
 
 export default horizen.init(async function(props){
-	const {localServices, controllers} = props;
+	const {controllers} = props;
 	const deps = {...props, config};
 
 	return {
@@ -14,11 +14,8 @@ export default horizen.init(async function(props){
 			post: [
 				controllers.addTask(deps),
 				controllers.completeTask(deps),
-			], 
-
-			get: [
 				controllers.getTasks(deps),
-			]
+			],
 		}
 	};
 });

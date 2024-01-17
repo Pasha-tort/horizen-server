@@ -72,12 +72,13 @@ function Test({config}){
 
 		it("Должен вернуть все tasks", async () => {
 			const response = await (await fetch(`${url}/api/getTasks`, {
-				method: "GET",
+				method: "POST",
 				headers: { "Content-Type": "application/json"},
 			})).json();
-
 			mockTasksIds.forEach(id => {
-				expect(response.result.tasks.map(t => t._id))
+				expect(response.result.tasksIds.map(taskId => taskId))
+					.to.include(id);
+				expect(response.result.tasks.map(t => t.taskId))
 					.to.include(id);
 			});
 		});
